@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from pdf.views import accept, resume
+from pdf.views import accept, resume, resume_pdf, user_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', accept, name='accept'),
-    path('<int:id>/',resume, name='resume')
+    path('<int:id>/',resume, name='resume'),
+    path('pdf/<int:id>/', resume_pdf, name='resume_pdf'),
+    path('users/', user_list, name='user_list'),
 ]
