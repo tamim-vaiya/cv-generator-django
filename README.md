@@ -77,3 +77,9 @@ What this view does:
 3. Creates a `pdfs/` directory if it doesn't exist
 4. Generates the PDF file and saves it as `resume_<id>.pdf`
 5. Returns the file as a downloadable PDF response
+
+## Example Resume PDF
+
+Here is a preview of a generated resume:
+
+![Resume Preview](pdfs/resume_preview.png)

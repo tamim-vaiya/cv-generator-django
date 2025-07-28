@@ -20,8 +20,8 @@ from pdf.views import accept, resume, resume_pdf, user_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', accept, name='accept'),
-    path('<int:id>/',resume, name='resume'),
+    path('', user_list, name='user_list'),
+    path('accept/', accept, name='accept'),
     path('pdf/<int:id>/', resume_pdf, name='resume_pdf'),
-    path('users/', user_list, name='user_list'),
+    path('<int:id>/',resume, name='resume'), # OPTIONAL
 ]

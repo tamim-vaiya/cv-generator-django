@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import asyncio
 from django.http import FileResponse, Http404
 from django.conf import settings
@@ -32,6 +32,7 @@ def accept(request):
             skills=skills
         )
         profile.save()
+        return redirect('user_list')
 
 
     return render(request, 'pdf/accept.html')
