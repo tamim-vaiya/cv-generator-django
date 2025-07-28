@@ -1,0 +1,9 @@
+# Ignore virtual environment folder
+cv_generator_venv/
+
+# Ignore Python cache files
+**/__pycache__/
+*.pyc
+
+# Ignore SQLite DB
+db.sqlite3
